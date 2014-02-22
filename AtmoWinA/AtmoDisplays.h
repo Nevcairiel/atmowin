@@ -21,7 +21,7 @@ class CAtmoDisplays
 {
 protected:
     int m_DisplayCount;
-    TAtmoDisplayInfo m_Displays[4];
+    TAtmoDisplayInfo m_Displays[16];
 public:
     CAtmoDisplays(void);
     ~CAtmoDisplays(void);
