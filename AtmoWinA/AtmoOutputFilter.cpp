@@ -9,9 +9,7 @@
  * $Id: aeab6fd98bf521829faf8d2c39458eac3a961b2b $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include <string.h>
 #include "AtmoOutputFilter.h"

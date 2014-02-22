@@ -1,4 +1,5 @@
 
+#include "stdafx.h"
 #include "AtmoNulConnection.h"
 
 CAtmoNulConnection::CAtmoNulConnection(CAtmoConfig *cfg) : CAtmoConnection(cfg)

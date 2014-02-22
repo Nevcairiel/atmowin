@@ -6,6 +6,7 @@
  *
  */
 
+#include "stdafx.h"
 
 #include "AtmoDefs.h"
 #include "KarateConnection.h"

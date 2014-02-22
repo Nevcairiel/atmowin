@@ -22,9 +22,7 @@
  * $Id: 73a6ff09311196a8e944641570c13843291109a9 $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include "AtmoDefs.h"
 #include "FnordlichtConnection.h"

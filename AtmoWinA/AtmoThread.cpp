@@ -6,9 +6,7 @@
  * $Id: 50c9c4b574cf3409b74b6f3b777df23d3fbade7a $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 #include <assert.h>
 
 #include "AtmoThread.h"

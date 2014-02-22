@@ -8,9 +8,7 @@
  * $Id: e0d77ee94589bc549fa0693751917cfaa4b5a472 $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include "AtmoDynData.h"
 

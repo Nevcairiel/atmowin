@@ -6,20 +6,13 @@
  * $Id: dd59374e429c24226713fd86f84a32b93021ecca $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
 #include "AtmoDefs.h"
-
-#if defined(WIN32)
-#   include <windows.h>
-#endif
-
 #include "AtmoCalculations.h"
 #include "AtmoConfig.h"
 #include "AtmoZoneDefinition.h"

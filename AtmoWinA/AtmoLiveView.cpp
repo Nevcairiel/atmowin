@@ -8,9 +8,7 @@
  * $Id: 2f8d0167a302fa343d16730e46bd362259a56744 $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #define __STDC_FORMAT_MACROS 1
 

@@ -9,9 +9,7 @@
  * $Id: 51156a25febe471e8bcffe59d9e47e1fa8599c22 $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include "AtmoDefs.h"
 #include "AtmoDmxSerialConnection.h"

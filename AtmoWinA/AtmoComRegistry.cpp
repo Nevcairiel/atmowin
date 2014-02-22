@@ -13,7 +13,7 @@ CAtmoComRegistry::~CAtmoComRegistry(void)
 {
 }
 
-typedef void (__stdcall *OaEnablePerUserTLibRegistration)(void); 
+typedef void (__stdcall *OaEnablePerUserTLibRegistrationFn)(void);
 
 void CAtmoComRegistry::SaveSettings(ATMO_BOOL force) {
     CAtmoRegistry *reg = new CAtmoRegistry(HKEY_CLASSES_ROOT);
@@ -126,7 +126,7 @@ void CAtmoComRegistry::SaveSettings(ATMO_BOOL force) {
           HMODULE oleaut32 = GetModuleHandle("Oleaut32.dll");  
           if(oleaut32 != 0)
           {
-            OaEnablePerUserTLibRegistration oaEnablePerUserTLibRegistration = (OaEnablePerUserTLibRegistration )GetProcAddress(oleaut32, "OaEnablePerUserTLibRegistration");
+            OaEnablePerUserTLibRegistrationFn oaEnablePerUserTLibRegistration = (OaEnablePerUserTLibRegistrationFn )GetProcAddress(oleaut32, "OaEnablePerUserTLibRegistration");
             if(oaEnablePerUserTLibRegistration)
             {
                oaEnablePerUserTLibRegistration();

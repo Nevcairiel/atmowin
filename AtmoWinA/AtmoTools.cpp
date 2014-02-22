@@ -6,9 +6,7 @@
  * $Id: 45dfca6a1929a43f6514eceda43096061a929399 $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include "AtmoTools.h"
 #include "AtmoDynData.h"

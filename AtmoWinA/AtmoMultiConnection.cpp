@@ -7,9 +7,7 @@
  * $Id: 01d1552397c6f04357f7d9e6024c21efa6b9edd4 $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include "AtmoDefs.h"
 #include "AtmoMultiConnection.h"

@@ -8,6 +8,9 @@
  *
  * $Id: bc47035e81fe9e5f76786531dc2e4a21d5371b96 $
  */
+
+#include "stdafx.h"
+
 #include "AtmoDefs.h"
 #include "AtmoEntecSerialConnection.h"
 #include "DmxTools.h"

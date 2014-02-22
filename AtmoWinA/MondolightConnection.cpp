@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #include "MondolightConnection.h"
 #include "AtmoClassicConfigDialog.h"
 

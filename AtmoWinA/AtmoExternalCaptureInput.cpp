@@ -8,9 +8,7 @@
  * $Id: 7e8d3cfb9910397d39efd9a1a0af4a52cf063a8d $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include "AtmoExternalCaptureInput.h"
 #include "AtmoTools.h"

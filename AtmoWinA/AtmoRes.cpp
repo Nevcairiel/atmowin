@@ -1,4 +1,5 @@
-#include <windows.h>
+
+#include "stdafx.h"
 #include "AtmoRes.h"
 
 

@@ -7,9 +7,7 @@
  * $Id: f79c9aa8d69c49638ec3326cb36f15af978f38f0 $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include <string.h>
 #include <stdlib.h>

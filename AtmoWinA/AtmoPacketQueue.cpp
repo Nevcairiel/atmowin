@@ -9,9 +9,7 @@
  * $Id: 5b831e32058e9f1c4f491ac96a37d46179226b64 $
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#include "stdafx.h"
 
 #include "AtmoDefs.h"
 #include "AtmoPacketQueue.h"
