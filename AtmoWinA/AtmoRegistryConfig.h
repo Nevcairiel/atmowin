@@ -2,21 +2,11 @@
 #define _AtmoRegistryConfig_h_
 
 #include "atmoconfig.h"
+#include "AtmoRegistry.h"
 
-class CAtmoRegistryConfig :  public CAtmoConfig
+class CAtmoRegistryConfig :  public CAtmoConfig, protected CAtmoRegistry
 {
 private:
-       void WriteRegistryInt(char *path, char *valueName, int value);
-       void WriteRegistryString(char *path, char *valueName, char *value);
-       void WriteRegistryDouble(char *path, char *valueName, double value);
-
-       int ReadRegistryInt(char *path, char *valueName, int default_value);
-       char * ReadRegistryString(char *path, char *valueName, char *default_value);
-       double ReadRegistryDouble(char *path, char *valueName, double default_value);
-
-	   int RegistryKeyExists(char *path);
-	   int RegistryValueExists(char *path, char *valueName);
-
 	   int CheckByteValue(int value);
 	   int Check8BitValue(int value);
  
