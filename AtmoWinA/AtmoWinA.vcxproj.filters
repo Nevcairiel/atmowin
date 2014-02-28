@@ -222,6 +222,9 @@
     <ClCompile Include="AtmoWin_i.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="AtmoDesktopDuplicationCaptureInput.cpp">
+      <Filter>Quelldateien\pixelsources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="AtmoWin.idl">
@@ -408,6 +411,9 @@
     </ClInclude>
     <ClInclude Include="AtmoWin_h.h">
       <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="AtmoDesktopDuplicationCaptureInput.h">
+      <Filter>Headerdateien\pixelsources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -30,6 +30,7 @@
 #   include "MondolightConnection.h"
 
 #   include "AtmoGdiDisplayCaptureInput.h"
+#   include "AtmoDesktopDuplicationCaptureInput.h"
 #endif
 
 
@@ -169,7 +170,7 @@ EffectMode CAtmoTools::SwitchEffect(CAtmoDynData *pDynData, EffectMode newEffect
                 }
                 currentPacketQueue = new CAtmoPacketQueue(packetMon);
                 pDynData->setLivePictureSource(lpsScreenCapture);
-                currentInput = new CAtmoGdiDisplayCaptureInput( pDynData );
+                currentInput = new CAtmoDesktopDuplicationCaptureInput( pDynData );
 #else
                 currentPacketQueue = new CAtmoPacketQueue();
                 pDynData->setLivePictureSource(lpsExtern);

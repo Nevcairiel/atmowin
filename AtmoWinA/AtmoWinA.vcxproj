@@ -92,6 +92,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AtmoDesktopDuplicationCaptureInput.cpp" />
     <ClCompile Include="AtmoRes.cpp" />
     <ClCompile Include="AtmoTools.cpp" />
     <ClCompile Include="AtmoWinA.cpp" />
@@ -164,6 +165,7 @@
   <ItemGroup>
     <ClInclude Include="AtmoCtrlMessages.h" />
     <ClInclude Include="AtmoDefs.h" />
+    <ClInclude Include="AtmoDesktopDuplicationCaptureInput.h" />
     <ClInclude Include="AtmoRes.h" />
     <ClInclude Include="AtmoTools.h" />
     <ClInclude Include="AtmoWinA.h" />
