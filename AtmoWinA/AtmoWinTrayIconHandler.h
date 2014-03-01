@@ -46,6 +46,8 @@ class CTrayIconWindow : public CBasicWindow {
 
          CAtmoDynData *m_pDynData;
 
+         BOOL m_bShuttingDown;
+
       protected: // --siehe CBasicWindow
 		 LPCTSTR ClassName();
   	     LRESULT HandleMessage(UINT message, WPARAM wParam, LPARAM lParam);

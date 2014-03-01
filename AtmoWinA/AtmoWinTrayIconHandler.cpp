@@ -27,6 +27,7 @@
 
 CTrayIconWindow::CTrayIconWindow(HINSTANCE hInst,CAtmoDynData *pDynData) : CBasicWindow(hInst, (HWND)NULL) {
     this->m_pDynData = pDynData;
+    m_bShuttingDown = false;
 }
 
 CTrayIconWindow::~CTrayIconWindow() {
@@ -216,6 +217,7 @@ LRESULT CTrayIconWindow::HandleWmCommand(HWND control, int wmId, int wmEvent) {
 
     switch (wmId) {
 	    case MENUID_QUITATMO:
+                m_bShuttingDown = true;
                 DestroyWindow(m_hWindow);
 	    break;
 
@@ -336,6 +338,9 @@ void CTrayIconWindow::ShowSettingsDialog() {
     pSetupDlg->ShowModal();
 
     delete pSetupDlg;
+
+    if (m_bShuttingDown)
+        return;
 
 
     m_pDynData->LockCriticalSection();
