@@ -35,6 +35,7 @@
 #define IDD_CFG_MOMO_DLG                142
 #define IDD_GRADIENTS                   143
 #define IDD_CFG_FNORDL_DLG              144
+#define IDD_CFG_ATMODUINO_DLG           145
 #define IDC_COMPORT                     1001
 #define IDC_EFFECTS                     1002
 #define IDC_BAUDRATE                    1002
@@ -137,6 +138,7 @@
 #define IDC_STATIC_EDGEW                1089
 #define IDC_EDT_FNORDL_CH               1090
 #define IDC_GDI_INTERLACE               1091
+#define IDC_ATMOCL_LED_AMOUNT           1092
 #define IDC_STATIC                      -1
 
 // Next default values for new objects
@@ -144,9 +146,9 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NO_MFC                     1
-#define _APS_NEXT_RESOURCE_VALUE        144
+#define _APS_NEXT_RESOURCE_VALUE        146
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1092
+#define _APS_NEXT_CONTROL_VALUE         1093
 #define _APS_NEXT_SYMED_VALUE           110
 #endif
 #endif

@@ -168,6 +168,9 @@ class CAtmoConfig {
          int m_Fnordlicht_Amount;
 
     protected:
+         int m_AtmoClLeds;
+
+    protected:
          AtmoGammaCorrect m_Software_gamma_mode;
 
          int m_Software_gamma_red;
@@ -390,6 +393,8 @@ class CAtmoConfig {
         int getFnordlicht_Amount() { return m_Fnordlicht_Amount; }
         void setFnordlicht_Amount(int fnordlichtAmount) { m_Fnordlicht_Amount = fnordlichtAmount; }
 
+        int getAtmoClLeds() { return m_AtmoClLeds; }
+        void setAtmoClLeds(int leds) { m_AtmoClLeds = leds; }
 };
 
 #endif

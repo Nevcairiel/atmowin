@@ -186,6 +186,8 @@ void CAtmoConfig::LoadDefaults() {
     m_MoMo_Channels           = 3; // default momo, there exists also a 4 ch version!
     m_Fnordlicht_Amount       = 2; // default fnordlicht, there are 2 fnordlicht's!
 
+    m_AtmoClLeds              = 32;
+
     m_ZonesTopCount            = 1;
     m_ZonesBottomCount         = 1;
     m_ZonesLRCount             = 1;
@@ -302,6 +304,8 @@ void CAtmoConfig::Assign(CAtmoConfig *pAtmoConfigSrc) {
     this->m_MoMo_Channels            = pAtmoConfigSrc->m_MoMo_Channels;
 
     this->m_Fnordlicht_Amount        = pAtmoConfigSrc->m_Fnordlicht_Amount;
+
+    this->m_AtmoClLeds				 = pAtmoConfigSrc->m_AtmoClLeds;
 
     this->m_CurrentChannelAssignment = pAtmoConfigSrc->m_CurrentChannelAssignment;
 

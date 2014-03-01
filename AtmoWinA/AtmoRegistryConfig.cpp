@@ -122,7 +122,8 @@ void CAtmoRegistryConfig::SaveSettings() {
     WriteRegistryInt(configRootKey,"MoMo_Channels", m_MoMo_Channels );
 
     WriteRegistryInt(configRootKey,"Fnordlicht_Amount", m_Fnordlicht_Amount );
-    
+
+    WriteRegistryInt(configRootKey,"hAtmoClLeds", m_AtmoClLeds);
 
     WriteRegistryInt(configRootKey,"NumChannelAssignments",getNumChannelAssignments());
     WriteRegistryInt(configRootKey,"CurrentChannelAssignment",m_CurrentChannelAssignment);
@@ -289,6 +290,10 @@ void CAtmoRegistryConfig::LoadSettings()
     m_Fnordlicht_Amount     = ReadRegistryInt(configRootKey,"Fnordlicht_Amount", m_Fnordlicht_Amount );
     if(m_Fnordlicht_Amount > 254) m_Fnordlicht_Amount = 254;
     if(m_Fnordlicht_Amount < 0)   m_Fnordlicht_Amount = 1;
+
+    m_AtmoClLeds            = ReadRegistryInt(configRootKey,"hAtmoClLeds", m_AtmoClLeds );
+    if (m_AtmoClLeds > 256) m_AtmoClLeds = 256;
+    if (m_AtmoClLeds < 1)   m_AtmoClLeds = 1;
 
     clearChannelMappings(); // clear channel mappings except default!
     m_CurrentChannelAssignment = ReadRegistryInt(configRootKey,"CurrentChannelAssignment",m_CurrentChannelAssignment);
