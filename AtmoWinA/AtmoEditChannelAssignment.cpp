@@ -210,31 +210,31 @@ ATMO_BOOL CAtmoEditChannelAssignment::InitDialog(WPARAM wParam)
 
             SetWindowFont(m_pChannelNames[ch], GetWindowFont(m_hDialog), false);
            
-            ComboBox_AddString(m_pZoneBoxes[ch], "deaktiviert" );
+            ComboBox_AddString(m_pZoneBoxes[ch], "Off" );
             int  zoneCounter = 0;
             for(int z = 0; z < pAtmoConfig->getZonesTopCount(); z++)
             {
-                sprintf(buf,"Oben [%d]",zoneCounter++);
+                sprintf(buf,"Top [%d]",zoneCounter++);
                 ComboBox_AddString(m_pZoneBoxes[ch], buf );
             }
             for(int z = 0; z < pAtmoConfig->getZonesLRCount(); z++)
             {
-                sprintf(buf,"Rechts [%d]",zoneCounter++);
+                sprintf(buf,"Right [%d]",zoneCounter++);
                 ComboBox_AddString(m_pZoneBoxes[ch], buf );
             }
             for(int z = 0; z < pAtmoConfig->getZonesBottomCount(); z++)
             {
-                sprintf(buf,"Unten [%d]",zoneCounter++);
+                sprintf(buf,"Bottom [%d]",zoneCounter++);
                 ComboBox_AddString(m_pZoneBoxes[ch], buf );
             }
             for(int z = 0; z < pAtmoConfig->getZonesLRCount(); z++)
             {
-                sprintf(buf,"Links [%d]",zoneCounter++);
+                sprintf(buf,"Left [%d]",zoneCounter++);
                 ComboBox_AddString(m_pZoneBoxes[ch], buf );
             }
             if(pAtmoConfig->getZoneSummary() == ATMO_TRUE)
             {
-                ComboBox_AddString(m_pZoneBoxes[ch], "Summenzone" );
+                ComboBox_AddString(m_pZoneBoxes[ch], "Combined" );
             }
 
             y += (comboRect.bottom - comboRect.top) + 1;

@@ -53,8 +53,8 @@ ATMO_BOOL CAtmoWhiteSetup::InitDialog(WPARAM wParam) {
 
      // order of items must match enum AtmoGammaCorrect!!
      hwndCtrl = getDlgItem(IDC_SW_GAMMA_MODE);
-     ComboBox_AddString(hwndCtrl, "deaktiviert");
-     ComboBox_AddString(hwndCtrl, "je Farbanteil");
+     ComboBox_AddString(hwndCtrl, "Off");
+     ComboBox_AddString(hwndCtrl, "Each color individually");
      ComboBox_AddString(hwndCtrl, "Global");
      ComboBox_SetCurSel(hwndCtrl, int(m_GammaCorrect) );
  
@@ -81,7 +81,7 @@ ATMO_BOOL CAtmoWhiteSetup::InitDialog(WPARAM wParam) {
      SetEditDouble(IDC_EDT_GAMMA_BLUE, (double)m_Gamma_Blue / 10.0);
 
 
-     SetWindowText(this->m_hDialog,"Weissabgleich"); //?
+     SetWindowText(this->m_hDialog,"White Balance"); //?
      return ATMO_TRUE;
 }
 

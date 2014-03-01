@@ -107,7 +107,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR    lpCmd
 
     atmoDisplays = new CAtmoDisplays();
     if(atmoConfig->getLiveView_DisplayNr()>=atmoDisplays->getCount()) {
-       MessageBox(0,"Displayseinstellungen prüfen.","Fehler",MB_ICONERROR | MB_OK);
+       MessageBox(0,"Check display settings.","Error",MB_ICONERROR | MB_OK);
        atmoConfig->setShowConfigDialog(1);
     }
 

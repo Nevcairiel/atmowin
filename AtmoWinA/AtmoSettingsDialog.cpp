@@ -186,11 +186,11 @@ ATMO_BOOL CAtmoSettingsDialog::InitDialog(WPARAM wParam)
            ComboBox_SetCurSel(m_hCbxDevicetypes, (int)-1);
 
         m_hCbxEffects = getDlgItem(IDC_EFFECTS);
-        ComboBox_AddString(m_hCbxEffects, "Kein Effekt aktiv");
-        ComboBox_AddString(m_hCbxEffects, "feste Farbe");
-        ComboBox_AddString(m_hCbxEffects, "live Bild");
-        ComboBox_AddString(m_hCbxEffects, "Farbwechsel");
-        ComboBox_AddString(m_hCbxEffects, "Farbwechsel LR");
+        ComboBox_AddString(m_hCbxEffects, "Off");
+        ComboBox_AddString(m_hCbxEffects, "Static colors");
+        ComboBox_AddString(m_hCbxEffects, "Live");
+        ComboBox_AddString(m_hCbxEffects, "Color changer");
+        ComboBox_AddString(m_hCbxEffects, "Color changer L/R");
         // Achtung - dazu muss die Reihenfolge der Enum Deklaration in AtmoConfig.h mit obiger Liste Synchron sein*g*
         ComboBox_SetCurSel(m_hCbxEffects, (int)config->getEffectMode());
 
@@ -404,7 +404,7 @@ void CAtmoSettingsDialog::UpdateDeviceConnection(AtmoConnectionType conType)
            {
              if(CAtmoTools::RecreateConnection(m_pDynData) == ATMO_TRUE) {
                 CAtmoTools::SwitchEffect(m_pDynData, oldEffect);
-                MessageBox( this->m_hDialog, "Verbindung hergestellt.", "Info", MB_ICONINFORMATION);
+                MessageBox( this->m_hDialog, "Connected successfully", "Info", MB_ICONINFORMATION);
              }
            }
         }
@@ -504,7 +504,7 @@ ATMO_BOOL CAtmoSettingsDialog::ExecuteCommand(HWND hControl,int wmId, int wmEven
 
                 if(CAtmoTools::RecreateConnection(m_pDynData) == ATMO_TRUE) {
                    CAtmoTools::SwitchEffect(m_pDynData, oldEffect);
-                   MessageBox( this->m_hDialog, "Verbindung hergestellt.", "Info", MB_ICONINFORMATION);
+                   MessageBox( this->m_hDialog, "Connected successfully", "Info", MB_ICONINFORMATION);
                 }
              }
              break;

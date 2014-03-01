@@ -15,13 +15,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Deutsch (Deutschland) resources
+// English (United States) resources
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
-#ifdef _WIN32
-LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -37,7 +35,7 @@ IDI_ATMOICON            ICON                    "icon1.ico"
 // Accelerator
 //
 
-IDC_ATMOWIN ACCELERATORS 
+IDC_ATMOWIN ACCELERATORS
 BEGIN
     "?",            IDM_ABOUT,              ASCII,  ALT
     "/",            IDM_ABOUT,              ASCII,  ALT
@@ -49,336 +47,252 @@ END
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOGEX 22, 17, 227, 113
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_CAPTION | 
-    WS_SYSMENU
+IDD_ABOUTBOX DIALOGEX 22, 17, 274, 193
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_CAPTION | WS_SYSMENU
 CAPTION "Info"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,79,92,69,12,WS_GROUP
+    DEFPUSHBUTTON   "Close",IDOK,89,153,69,12,WS_GROUP
     LTEXT           "AtmoWin",IDC_STATIC,30,8,38,8
-    LTEXT           "Controlsoftware for a PC Atmo Light...",IDC_STATIC,7,22,
-                    135,8
-    LTEXT           "developed by  the VDR-Portal community",IDC_STATIC,8,32,
-                    202,8
-    LTEXT           "Original versions: MacGyver2k, Matthiaz\nAtmoWinA rewrite: Igor (aka André Weber)\nAlgorithms for Color computation: Eike Edener",
-                    IDC_STATIC,8,44,205,29
-    LTEXT           "http://www.vdr-wiki.de/wiki/index.php/Atmo-plugin\nhttp://www.vdr-wiki.de/wiki/index.php/AtmoWin",
-                    IDC_STATIC,10,72,184,16
-    ICON            IDI_ATMOICON,IDC_STATIC,4,3,21,20
+    LTEXT           "Controlsoftware for a PC Atmo Light...",IDC_STATIC,9,22,135,8
+    LTEXT           "developed by  the VDR-Portal community",IDC_STATIC,9,32,202,8
+    LTEXT           "Original versions: MacGyver2k, Matthiaz\nAtmoWinA rewrite: Igor (aka André Weber)\nAlgorithms for Color computation: Eike Edener\n\nTranslated to English by RickDB\n Modded by Wolph and Nevcairiel",IDC_STATIC,8,46,205,52
+    LTEXT           "\n\nOriginal code:\nhttp://www.vdr-wiki.de/wiki/index.php/Atmo-plugin\nhttp://www.vdr-wiki.de/wiki/index.php/AtmoWin",IDC_STATIC,8,97,260,71
+    ICON            IDI_ATMOICON,IDC_STATIC,4,3,20,20
 END
 
 IDD_SETUP DIALOGEX 0, 0, 386, 273
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
-    WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "AtmoWinX"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     COMBOBOX        IDC_DEVICETYPE,54,3,72,100,CBS_DROPDOWNLIST | WS_TABSTOP
-    PUSHBUTTON      "Gerät konfigurieren...",IDC_BU_CONFIG_DEVICE,133,3,87,
-                    12
+    PUSHBUTTON      "Configure device",IDC_BU_CONFIG_DEVICE,133,3,87,12
     COMBOBOX        IDC_EFFECTS,54,18,72,100,CBS_DROPDOWNLIST | WS_TABSTOP
     EDITTEXT        IDC_ED_ZONETOPC,78,43,32,14,ES_AUTOHSCROLL | ES_NUMBER
     EDITTEXT        IDC_ED_ZONELRC,107,59,32,14,ES_AUTOHSCROLL | ES_NUMBER
-    CONTROL         "Summenzone",IDC_CBX_ZONESUM,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,148,61,58,10
-    EDITTEXT        IDC_ED_ZONEBOTTOMC,78,75,32,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    PUSHBUTTON      "Kanalzuordnung bearbeiten",IDC_BU_CHANNELASSIGNMENTS,
-                    115,75,109,14
-    PUSHBUTTON      "Softwareabgleich konfigurieren",IDC_BU_WHITEADJ_SW,243,
-                    45,120,14
-    PUSHBUTTON      "Hardwareabgleich konfigurieren",IDC_BU_WHITEADJ_HW,243,
-                    62,120,14
-    EDITTEXT        IDC_ED_COLORCHANGE_STEPS,50,105,40,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    EDITTEXT        IDC_ED_COLORCHANGE_DELAY,50,121,40,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    EDITTEXT        IDC_ED_LRCOLORCHANGE_STEPS,146,105,40,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    EDITTEXT        IDC_ED_LRCOLORCHANGE_DELAY,146,121,40,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    PUSHBUTTON      "auswählen",IDC_BU_SELSTATICCOLOR,199,105,57,14
-    PUSHBUTTON      "auswählen",IDC_BU_SELSHUTDOWNCOLOR,296,105,57,14
-    CONTROL         "verwenden...",IDC_CHK_USESHUTDOWNCOLOR,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,296,121,60,10
-    COMBOBOX        IDC_DISPLAYS,52,150,139,100,CBS_DROPDOWNLIST | 
-                    WS_TABSTOP
-    CONTROL         "",IDC_EdgeWeighting,"msctls_trackbar32",TBS_BOTH | 
-                    TBS_NOTICKS | WS_TABSTOP,80,169,100,16
-    CONTROL         "",IDC_BrightCorrect,"msctls_trackbar32",TBS_BOTH | 
-                    TBS_NOTICKS | WS_TABSTOP,80,185,100,16
-    CONTROL         "",IDC_DarknessLimit,"msctls_trackbar32",TBS_BOTH | 
-                    TBS_NOTICKS | WS_TABSTOP,80,202,100,16
-    CONTROL         "",IDC_HueWinSize,"msctls_trackbar32",TBS_BOTH | 
-                    TBS_NOTICKS | WS_TABSTOP,80,219,100,16
-    CONTROL         "",IDC_SatWinSize,"msctls_trackbar32",TBS_BOTH | 
-                    TBS_NOTICKS | WS_TABSTOP,80,236,100,16
-    CONTROL         "Widescreenmodus",IDC_WIDESCREEN,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,199,153,74,10
-    COMBOBOX        IDC_FILTERMODE,283,170,89,100,CBS_DROPDOWNLIST | 
-                    WS_TABSTOP
-    CONTROL         "",IDC_Filter_MeanLength,"msctls_trackbar32",TBS_BOTH | 
-                    TBS_NOTICKS | WS_TABSTOP,277,185,100,16
-    CONTROL         "",IDC_Filter_MeanThreshold,"msctls_trackbar32",TBS_BOTH | 
-                    TBS_NOTICKS | WS_TABSTOP,277,202,100,16
-    CONTROL         "",IDC_Filter_PercentNew,"msctls_trackbar32",TBS_BOTH | 
-                    TBS_NOTICKS | WS_TABSTOP,277,219,100,16
-    EDITTEXT        IDC_GDI_CAPURE_RATE,261,237,24,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    PUSHBUTTON      "Abbrechen",IDCANCEL,229,256,67,14
+    CONTROL         "Combined zone",IDC_CBX_ZONESUM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,148,61,62,10
+    EDITTEXT        IDC_ED_ZONEBOTTOMC,78,75,32,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Change channel assignments",IDC_BU_CHANNELASSIGNMENTS,115,75,109,14
+    PUSHBUTTON      "Configure software adjustment",IDC_BU_WHITEADJ_SW,243,45,120,14
+    PUSHBUTTON      "Configure hardware adjustment",IDC_BU_WHITEADJ_HW,243,62,120,14
+    EDITTEXT        IDC_ED_COLORCHANGE_STEPS,50,105,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_ED_COLORCHANGE_DELAY,50,121,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_ED_LRCOLORCHANGE_STEPS,146,105,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_ED_LRCOLORCHANGE_DELAY,146,121,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Select",IDC_BU_SELSTATICCOLOR,199,105,57,14
+    PUSHBUTTON      "Select",IDC_BU_SELSHUTDOWNCOLOR,296,105,57,14
+    CONTROL         "Use...",IDC_CHK_USESHUTDOWNCOLOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,296,121,60,10
+    COMBOBOX        IDC_DISPLAYS,52,150,139,100,CBS_DROPDOWNLIST | WS_TABSTOP
+    CONTROL         "",IDC_EdgeWeighting,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,80,169,100,16
+    CONTROL         "",IDC_BrightCorrect,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,80,185,100,16
+    CONTROL         "",IDC_DarknessLimit,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,80,202,100,16
+    CONTROL         "",IDC_HueWinSize,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,80,219,100,16
+    CONTROL         "",IDC_SatWinSize,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,80,236,100,16
+    CONTROL         "Widescreenmodus",IDC_WIDESCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,199,153,74,10
+    COMBOBOX        IDC_FILTERMODE,283,170,89,100,CBS_DROPDOWNLIST | WS_TABSTOP
+    CONTROL         "",IDC_Filter_MeanLength,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,277,185,100,16
+    CONTROL         "",IDC_Filter_MeanThreshold,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,277,202,100,16
+    CONTROL         "",IDC_Filter_PercentNew,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,277,219,100,16
+    EDITTEXT        IDC_GDI_CAPURE_RATE,261,237,24,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Exit",IDCANCEL,229,256,67,14
     DEFPUSHBUTTON   "OK",IDOK,315,256,67,14
-    LTEXT           "aktiver Effekt:",IDC_STATIC,2,20,47,8
-    GROUPBOX        "Feste Farbe",IDC_STATIC,193,95,93,46
-    GROUPBOX        "Farbwechsel",IDC_STATIC,2,95,93,46
-    GROUPBOX        "Farbwechsel LR",IDC_STATIC,98,95,93,46
-    GROUPBOX        "Shutdown Farbe",IDC_STATIC,289,95,93,46
-    LTEXT           "Schritte:",IDC_STATIC,8,105,28,8
+    LTEXT           "Effect active:",IDC_STATIC,2,20,47,8
+    GROUPBOX        "Static color",IDC_STATIC,193,95,93,46
+    GROUPBOX        "Color change",IDC_STATIC,2,95,93,46
+    GROUPBOX        "Color change Left/Right",IDC_STATIC,98,95,93,46
+    GROUPBOX        "Shutdown color",IDC_STATIC,289,95,93,46
+    LTEXT           "Steps:",IDC_STATIC,8,105,28,8
     LTEXT           "Delay [ms]:",IDC_STATIC,8,121,38,8
-    LTEXT           "Schritte:",IDC_STATIC,104,107,28,8
+    LTEXT           "Steps:",IDC_STATIC,104,107,28,8
     LTEXT           "Delay [ms]:",IDC_STATIC,104,121,38,8
-    LTEXT           "Gerätetyp:",IDC_STATIC,2,5,36,8
-    LTEXT           "Anzahl Zonen oben:",IDC_STATIC,8,44,65,8
-    LTEXT           "Anzahl Zonen unten:",IDC_STATIC,8,76,68,8
-    LTEXT           "Anzahl Zonen Links/Rechts:",IDC_STATIC,8,60,89,8
-    GROUPBOX        "Live Bild Parameter",IDC_STATIC,2,141,381,114
+    LTEXT           "Device type:",IDC_STATIC,2,5,36,8
+    LTEXT           "Zones top:",IDC_STATIC,8,44,65,8
+    LTEXT           "Zones bottom:",IDC_STATIC,8,76,68,8
+    LTEXT           "Zones Left/Right:",IDC_STATIC,8,60,89,8
+    GROUPBOX        "Live image parameters",IDC_STATIC,2,141,381,114
     LTEXT           "GDI capure framerate",IDC_STATIC,187,241,71,8
     LTEXT           "Filtermodus:",IDC_STATIC,187,172,84,8
-    LTEXT           "Filter smoothness [100%]",IDC_TXT_Filter_PercentNew,187,
-                    223,84,8,NOT WS_GROUP
-    LTEXT           "Filter threshold [100%]",IDC_TXT_Filter_MeanThreshold,
-                    187,206,84,8,NOT WS_GROUP
-    LTEXT           "Filter length [5000 ms]",IDC_TXT_Filter_MeanLength,187,
-                    190,84,8,NOT WS_GROUP
-    LTEXT           "Sat windowing [5]",IDC_TXT_SATWINSIZE,8,241,65,8,NOT 
-                    WS_GROUP
-    LTEXT           "Hue windowing [5]",IDC_TXT_HUEWINSIZE,8,223,65,8,NOT 
-                    WS_GROUP
-    LTEXT           "Darkness limit [10]",IDC_TXT_DARKNESSLIMIT,8,206,65,8,
-                    NOT WS_GROUP
-    LTEXT           "Brightness [300%]",IDC_TXT_BRIGHTCORRECT,8,190,65,8,NOT 
-                    WS_GROUP
-    LTEXT           "Edge weighting [30]",IDC_TXT_EDGEWEIGHTNING,8,172,65,8,
-                    NOT WS_GROUP
-    LTEXT           "Quellmonitor:",IDC_STATIC,8,153,44,8
-    GROUPBOX        "Zonenanordnung / Annordung der LED Stripes",IDC_STATIC,
-                    2,33,230,60
-    GROUPBOX        "Weissabgleich",IDC_STATIC,237,33,145,60
-    PUSHBUTTON      "Gradienten...",IDC_GRADIENT_EDIT,171,41,51,14
-    EDITTEXT        IDC_GDI_INTERLACE,347,237,24,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
+    LTEXT           "Filter smoothness [100%]",IDC_TXT_Filter_PercentNew,187,223,84,8,NOT WS_GROUP
+    LTEXT           "Filter threshold [100%]",IDC_TXT_Filter_MeanThreshold,187,206,84,8,NOT WS_GROUP
+    LTEXT           "Filter length [5000 ms]",IDC_TXT_Filter_MeanLength,187,190,84,8,NOT WS_GROUP
+    LTEXT           "Sat windowing [5]",IDC_TXT_SATWINSIZE,8,241,65,8,NOT WS_GROUP
+    LTEXT           "Hue windowing [5]",IDC_TXT_HUEWINSIZE,8,223,65,8,NOT WS_GROUP
+    LTEXT           "Darkness limit [10]",IDC_TXT_DARKNESSLIMIT,8,206,65,8,NOT WS_GROUP
+    LTEXT           "Brightness [300%]",IDC_TXT_BRIGHTCORRECT,8,190,65,8,NOT WS_GROUP
+    LTEXT           "Edge weighting [30]",IDC_TXT_EDGEWEIGHTNING,8,172,65,8,NOT WS_GROUP
+    LTEXT           "Monitor",IDC_STATIC,8,153,25,8
+    GROUPBOX        "Zone arrangement / Number of leds",IDC_STATIC,2,33,230,60
+    GROUPBOX        "White Balance",IDC_STATIC,237,33,145,60
+    PUSHBUTTON      "Gradients...",IDC_GRADIENT_EDIT,171,41,51,14
+    EDITTEXT        IDC_GDI_INTERLACE,347,237,24,14,ES_AUTOHSCROLL | ES_NUMBER
     LTEXT           "Interlace rows",IDC_STATIC,295,241,47,8
 END
 
 IDD_COLORPICKER DIALOGEX 0, 0, 331, 113
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
-    WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Colorpicker"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    CONTROL         "",IDC_SL_RED,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,27,9,264,24
+    CONTROL         "",IDC_SL_RED,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,27,9,264,24
     EDITTEXT        IDC_EDT_RED,297,15,27,14,ES_AUTOHSCROLL | ES_NUMBER
-    CONTROL         "",IDC_SL_GREEN,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,27,33,264,24
+    CONTROL         "",IDC_SL_GREEN,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,27,33,264,24
     EDITTEXT        IDC_EDT_GREEN,297,39,27,14,ES_AUTOHSCROLL | ES_NUMBER
-    CONTROL         "",IDC_SL_BLUE,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,27,57,264,24
+    CONTROL         "",IDC_SL_BLUE,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,27,57,264,24
     EDITTEXT        IDC_EDT_BLUE,297,63,27,14,ES_AUTOHSCROLL | ES_NUMBER
-    PUSHBUTTON      "Abbrechen",IDCANCEL,55,90,63,18
+    PUSHBUTTON      "Exit",IDCANCEL,55,90,63,18
     DEFPUSHBUTTON   "OK",IDOK,214,90,63,18
-    LTEXT           "Rot",IDC_STATIC,9,15,12,8
-    LTEXT           "Grün",IDC_STATIC,9,39,16,8
-    LTEXT           "Blau",IDC_STATIC,9,63,14,8
+    LTEXT           "Red",IDC_STATIC,9,15,12,8
+    LTEXT           "Green",IDC_STATIC,9,39,21,8
+    LTEXT           "Blue",IDC_STATIC,9,63,14,8
 END
 
 IDD_WHITEADJ DIALOGEX 0, 0, 331, 265
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
-    WS_POPUP | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Colorpicker"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    CONTROL         "Softwareweissabgleich aktivieren",IDC_ENABLE,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,10,15,122,10
-    CONTROL         "",IDC_SL_RED,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,27,25,264,24
+    CONTROL         "White balance software",IDC_ENABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,15,92,10
+    CONTROL         "",IDC_SL_RED,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,27,25,264,24
     EDITTEXT        IDC_EDT_RED,295,30,27,14,ES_AUTOHSCROLL | ES_NUMBER
-    CONTROL         "",IDC_SL_GREEN,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,27,49,264,24
+    CONTROL         "",IDC_SL_GREEN,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,27,49,264,24
     EDITTEXT        IDC_EDT_GREEN,295,54,27,14,ES_AUTOHSCROLL | ES_NUMBER
-    CONTROL         "",IDC_SL_BLUE,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,27,73,264,24
+    CONTROL         "",IDC_SL_BLUE,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,27,73,264,24
     EDITTEXT        IDC_EDT_BLUE,295,78,27,14,ES_AUTOHSCROLL | ES_NUMBER
-    COMBOBOX        IDC_SW_GAMMA_MODE,89,114,101,100,CBS_DROPDOWNLIST | 
-                    WS_TABSTOP
-    CONTROL         "",IDC_SL_GLOBALGAMMA,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,37,130,254,24
+    COMBOBOX        IDC_SW_GAMMA_MODE,89,114,101,100,CBS_DROPDOWNLIST | WS_TABSTOP
+    CONTROL         "",IDC_SL_GLOBALGAMMA,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,37,130,254,24
     EDITTEXT        IDC_EDT_GLOBALGAMMA,295,135,27,14,ES_AUTOHSCROLL
-    CONTROL         "",IDC_SL_GAMMA_RED,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,37,162,254,24
+    CONTROL         "",IDC_SL_GAMMA_RED,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,37,162,254,24
     EDITTEXT        IDC_EDT_GAMMA_RED,295,167,27,14,ES_AUTOHSCROLL
-    CONTROL         "",IDC_SL_GAMMA_GREEN,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,37,186,254,24
+    CONTROL         "",IDC_SL_GAMMA_GREEN,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,37,186,254,24
     EDITTEXT        IDC_EDT_GAMMA_GREEN,295,191,27,14,ES_AUTOHSCROLL
-    CONTROL         "",IDC_SL_GAMMA_BLUE2,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,37,210,254,24
+    CONTROL         "",IDC_SL_GAMMA_BLUE2,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,37,210,254,24
     EDITTEXT        IDC_EDT_GAMMA_BLUE,295,215,27,14,ES_AUTOHSCROLL
-    PUSHBUTTON      "Abbrechen",IDCANCEL,55,244,63,18
+    PUSHBUTTON      "Exit",IDCANCEL,55,244,63,18
     DEFPUSHBUTTON   "OK",IDOK,214,244,63,18
-    LTEXT           "Rot",IDC_STATIC,9,32,12,8
-    LTEXT           "Grün",IDC_STATIC,9,56,16,8
-    LTEXT           "Blau",IDC_STATIC,9,80,14,8
-    GROUPBOX        "Weissabgleich",IDC_STATIC,3,3,325,96
-    GROUPBOX        "Software Gammakorrektur",IDC_STATIC,3,103,325,138
-    LTEXT           "Gammakorrekturmodus:",IDC_STATIC,10,117,77,8
-    LTEXT           "Rot",IDC_STATIC,9,170,12,8
-    LTEXT           "Grün",IDC_STATIC,9,194,16,8
-    LTEXT           "Blau",IDC_STATIC,9,218,14,8
+    LTEXT           "Red",IDC_STATIC,9,32,12,8
+    LTEXT           "Green",IDC_STATIC,9,56,20,8
+    LTEXT           "Blue",IDC_STATIC,9,80,14,8
+    GROUPBOX        "White Balance",IDC_STATIC,3,3,325,96
+    GROUPBOX        "Software Gamma correction",IDC_STATIC,3,103,325,138
+    LTEXT           "Gamma correction modus:",IDC_STATIC,10,117,77,8
+    LTEXT           "Red",IDC_STATIC,9,170,12,8
+    LTEXT           "Green",IDC_STATIC,9,194,23,8
+    LTEXT           "Blue",IDC_STATIC,9,218,14,8
     LTEXT           "Global",IDC_STATIC,9,138,20,8
 END
 
 IDD_WHITEADJ_HW DIALOGEX 0, 0, 310, 278
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
-    WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Hardware Weissabgleich"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    CONTROL         "",IDC_SL_GLOBALGAMMA,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,6,11,264,24
-    EDITTEXT        IDC_EDT_GLOBALGAMMA,276,16,27,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    CONTROL         "",IDC_SL_BRIGHTN_RED,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,33,53,234,24
-    EDITTEXT        IDC_EDT_BRIGHTN_RED,276,58,27,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    CONTROL         "",IDC_SL_BRIGHTN_GREEN,"msctls_trackbar32",
-                    TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,33,77,234,24
-    EDITTEXT        IDC_EDT_BRIGHTN_GREEN,276,82,27,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    CONTROL         "",IDC_SL_BRIGHTN_BLUE,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,33,101,234,24
-    EDITTEXT        IDC_EDT_BRIGHTN_BLUE,276,106,27,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    CONTROL         "",IDC_SL_BRIGHTN_GLOBAL,"msctls_trackbar32",
-                    TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,33,141,234,24
-    EDITTEXT        IDC_EDT_BRIGHTN_GLOBAL,276,144,27,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    CONTROL         "",IDC_SL_GAMMA_RED,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,33,180,234,24
+    CONTROL         "",IDC_SL_GLOBALGAMMA,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,6,11,264,24
+    EDITTEXT        IDC_EDT_GLOBALGAMMA,276,16,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SL_BRIGHTN_RED,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,33,53,234,24
+    EDITTEXT        IDC_EDT_BRIGHTN_RED,276,58,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SL_BRIGHTN_GREEN,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,33,77,234,24
+    EDITTEXT        IDC_EDT_BRIGHTN_GREEN,276,82,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SL_BRIGHTN_BLUE,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,33,101,234,24
+    EDITTEXT        IDC_EDT_BRIGHTN_BLUE,276,106,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SL_BRIGHTN_GLOBAL,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,33,141,234,24
+    EDITTEXT        IDC_EDT_BRIGHTN_GLOBAL,276,144,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SL_GAMMA_RED,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,33,180,234,24
     EDITTEXT        IDC_EDT_GAMMA_RED,276,185,27,14,ES_AUTOHSCROLL
-    CONTROL         "",IDC_SL_GAMMA_GREEN,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,33,204,234,24
+    CONTROL         "",IDC_SL_GAMMA_GREEN,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,33,204,234,24
     EDITTEXT        IDC_EDT_GAMMA_GREEN,276,209,27,14,ES_AUTOHSCROLL
-    CONTROL         "",IDC_SL_GAMMA_BLUE,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,33,228,234,24
+    CONTROL         "",IDC_SL_GAMMA_BLUE,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,33,228,234,24
     EDITTEXT        IDC_EDT_GAMMA_BLUE,276,233,27,14,ES_AUTOHSCROLL
-    CONTROL         "in Controller speichern...",IDC_SAVE_TO_EEPROM,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,3,261,95,10
-    PUSHBUTTON      "Abbrechen",IDCANCEL,201,258,50,14
+    CONTROL         "Save to controller programming (EEPROM)...",IDC_SAVE_TO_EEPROM,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,3,261,95,10
+    PUSHBUTTON      "Exit",IDCANCEL,201,258,50,14
     DEFPUSHBUTTON   "OK",IDOK,258,258,50,14
-    GROUPBOX        "Einstellhelligkeit...",IDC_STATIC,0,0,309,41
-    GROUPBOX        "Helligkeit (Kontrast;-)",IDC_STATIC,0,42,309,87
-    LTEXT           "Rot",IDC_STATIC,6,61,12,8
-    LTEXT           "Grün",IDC_STATIC,6,85,16,8
-    LTEXT           "Blau",IDC_STATIC,6,109,14,8
-    GROUPBOX        "Gamma Korrektur",IDC_STATIC,0,169,309,85
-    LTEXT           "Rot",IDC_STATIC,6,188,12,8
-    LTEXT           "Grün",IDC_STATIC,6,212,16,8
-    LTEXT           "Blau",IDC_STATIC,6,236,14,8
-    GROUPBOX        "Globale Helligkeit (Globaler Kontrast;-) ",IDC_STATIC,0,
-                    129,309,38
+    GROUPBOX        "Adjusting brightness...",IDC_STATIC,0,0,309,41
+    GROUPBOX        "Brightness (contrast)",IDC_STATIC,0,42,309,87
+    LTEXT           "Red",IDC_STATIC,6,61,12,8
+    LTEXT           "Green",IDC_STATIC,6,85,16,8
+    LTEXT           "Blue",IDC_STATIC,6,109,14,8
+    GROUPBOX        "Gamma correction",IDC_STATIC,0,169,309,85
+    LTEXT           "Red",IDC_STATIC,6,188,12,8
+    LTEXT           "Green",IDC_STATIC,6,212,16,8
+    LTEXT           "Blue",IDC_STATIC,6,236,14,8
+    GROUPBOX        "Global brightness (Global contrast) ",IDC_STATIC,0,129,309,38
 END
 
 IDD_CHANNELASSIGNMENT DIALOGEX 0, 0, 388, 194
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
-    WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Kanalzuordnung bearbeiten"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    LISTBOX         IDC_LST_MAPPINGS,2,12,114,177,LBS_NOINTEGRALHEIGHT | 
-                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LST_MAPPINGS,2,12,114,177,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_EDT_NAME,120,12,144,14,ES_AUTOHSCROLL
     SCROLLBAR       IDC_SCROLL,265,41,10,148,SBS_VERT
-    PUSHBUTTON      "gewähltes Mapping löschen",IDC_BU_DELETE,280,115,104,14,
-                    WS_DISABLED
-    PUSHBUTTON      "gewähltes Mapping ändern",IDC_BU_MODIFY,280,130,104,14,
-                    WS_DISABLED
-    PUSHBUTTON      "Mapping hinzufügen",IDC_BU_ADD,280,145,104,14,
-                    WS_DISABLED
-    PUSHBUTTON      "Abbrechen",IDCANCEL,280,160,104,14
+    PUSHBUTTON      "Delete selected mapping",IDC_BU_DELETE,280,115,104,14,WS_DISABLED
+    PUSHBUTTON      "Change selected mapping",IDC_BU_MODIFY,280,130,104,14,WS_DISABLED
+    PUSHBUTTON      "Add mapping",IDC_BU_ADD,280,145,104,14,WS_DISABLED
+    PUSHBUTTON      "Exit",IDCANCEL,280,160,104,14
     DEFPUSHBUTTON   "OK",IDOK,280,175,104,14
-    LTEXT           "vorhandene Mappings",IDC_STATIC,1,1,72,8
-    LTEXT           "Hardware Kanal",IDC_HW_CHANNEL_STATIC,120,29,52,8
-    LTEXT           "Quellzone",IDC_HW_ZONE_STATIC,188,29,32,8
-    LTEXT           "Name des Mappings",IDC_STATIC,120,1,64,8
+    LTEXT           "Existing mappings",IDC_STATIC,1,1,72,8
+    LTEXT           "Hardware channels",IDC_HW_CHANNEL_STATIC,120,29,52,8
+    LTEXT           "Source zone",IDC_HW_ZONE_STATIC,188,29,32,8
+    LTEXT           "Mapping name",IDC_STATIC,120,1,64,8
 END
 
-IDD_CFG_ATMO_DLG DIALOGEX 0, 0, 186, 47
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
-    WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Classic Atmo Light konfigurieren"
+IDD_CFG_ATMO_DLG DIALOGEX 0, 0, 186, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup Classic Atmo Light"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    PUSHBUTTON      "Abbrechen",IDCANCEL,77,31,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,77,31,50,14
     DEFPUSHBUTTON   "OK",IDOK,134,31,50,14
-    LTEXT           "Schnittstelle:",IDC_STATIC,9,11,42,8
-    GROUPBOX        "Verbindung...",IDC_STATIC,2,2,182,27
+    LTEXT           "Interface:",IDC_STATIC,9,11,42,8
+    GROUPBOX        "Connection...",IDC_STATIC,2,2,182,27
     COMBOBOX        IDC_COMPORT,58,9,73,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
                     WS_TABSTOP
 END
 
 IDD_CFG_DMX_DLG DIALOGEX 0, 0, 186, 125
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
-    WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Simple DMX  konfigurieren"
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup Simple DMX"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    COMBOBOX        IDC_COMPORT,69,11,73,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_COMPORT,69,11,73,100,CBS_DROPDOWNLIST | WS_TABSTOP
     EDITTEXT        IDC_EDT_DMX_BASE,5,71,175,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_EDT_DMX_RGB,102,43,40,14,ES_AUTOHSCROLL | ES_NUMBER
-    PUSHBUTTON      "Abbrechen",IDCANCEL,77,108,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,77,108,50,14
     DEFPUSHBUTTON   "OK",IDOK,134,108,50,14
-    LTEXT           "Schnittstelle:",IDC_STATIC,9,11,42,8
-    GROUPBOX        "Verbindung...",IDC_STATIC,2,2,182,103
-    LTEXT           "DMX Startkanäle durch "","" oder "";"" getrennt",
-                    IDC_STATIC,6,61,140,8
-    LTEXT           "Anzahl RGB Kanäle (1..84):",IDC_STATIC,9,43,88,8
+    LTEXT           "Interface:",IDC_STATIC,9,11,42,8
+    GROUPBOX        "Connection...",IDC_STATIC,2,2,182,103
+    LTEXT           "DMX start channels by "","" oder "";"" getrennt",IDC_STATIC,6,61,140,8
+    LTEXT           "Number of RGB channels (1..64):",IDC_STATIC,9,43,88,8
     COMBOBOX        IDC_BAUDRATE,69,26,73,100,CBS_DROPDOWNLIST | WS_TABSTOP
-    LTEXT           "Geschwindigkeit:",IDC_STATIC,9,26,54,8
+    LTEXT           "Speed:",IDC_STATIC,9,26,54,8
 END
 
 IDD_CFG_MULTI_DLG DIALOGEX 0, 0, 154, 113
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
-    WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Multi Atmo Light konfigurieren"
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup Multi Atmo Light"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    COMBOBOX        IDC_COMPORT_0,72,12,72,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
-    COMBOBOX        IDC_COMPORT_1,72,30,72,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
-    COMBOBOX        IDC_COMPORT_2,72,48,72,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
-    COMBOBOX        IDC_COMPORT_3,72,66,72,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
-    PUSHBUTTON      "Abbrechen",IDCANCEL,36,96,50,14
+    COMBOBOX        IDC_COMPORT_0,72,12,72,100,CBS_DROPDOWNLIST | WS_TABSTOP
+    COMBOBOX        IDC_COMPORT_1,72,30,72,100,CBS_DROPDOWNLIST | WS_TABSTOP
+    COMBOBOX        IDC_COMPORT_2,72,48,72,100,CBS_DROPDOWNLIST | WS_TABSTOP
+    COMBOBOX        IDC_COMPORT_3,72,66,72,100,CBS_DROPDOWNLIST | WS_TABSTOP
+    PUSHBUTTON      "Exit",IDCANCEL,36,96,50,14
     DEFPUSHBUTTON   "OK",IDOK,96,96,50,14
-    LTEXT           "Schnittstelle 0:",IDC_STATIC,9,14,48,8
-    GROUPBOX        "Verbindung...",IDC_STATIC,2,2,148,88
-    LTEXT           "Schnittstelle 1:",IDC_STATIC,9,32,48,8
-    LTEXT           "Schnittstelle 2:",IDC_STATIC,9,50,48,8
-    LTEXT           "Schnittstelle 3:",IDC_STATIC,9,68,48,8
+    LTEXT           "Interface 0:",IDC_STATIC,9,14,48,8
+    GROUPBOX        "Connection",IDC_STATIC,2,2,148,88
+    LTEXT           "Interface 1:",IDC_STATIC,9,32,48,8
+    LTEXT           "Interface 2:",IDC_STATIC,9,50,48,8
+    LTEXT           "Interface 3:",IDC_STATIC,9,68,48,8
 END
 
 IDD_CFG_MOMO_DLG DIALOGEX 0, 0, 186, 70
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
-    WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Configure MoMoLight device"
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup MoMoLight device"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    COMBOBOX        IDC_COMPORT,61,11,80,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_COMPORT,61,11,80,100,CBS_DROPDOWNLIST | WS_TABSTOP
     PUSHBUTTON      "Cancel",IDCANCEL,77,54,50,14
     DEFPUSHBUTTON   "OK",IDOK,134,54,50,14
     LTEXT           "Serialport:",IDC_STATIC,9,11,34,8
@@ -388,35 +302,29 @@ BEGIN
 END
 
 IDD_GRADIENTS DIALOGEX 0, 0, 372, 198
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
-    WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Gradientverläufe"
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Gradient progressions"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,318,180,50,14
-    PUSHBUTTON      "Abbrechen",IDCANCEL,318,159,50,14
-    GROUPBOX        "Zonen",IDC_ZONE_GROUP,4,4,308,167,WS_TABSTOP,
-                    WS_EX_ACCEPTFILES
-    CONTROL         "",IDC_EDGE_WEIGHT,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,78,171,233,23
+    PUSHBUTTON      "Exit",IDCANCEL,318,159,50,14
+    GROUPBOX        "Zones",IDC_ZONE_GROUP,4,4,308,167,WS_TABSTOP,WS_EX_ACCEPTFILES
+    CONTROL         "",IDC_EDGE_WEIGHT,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,78,171,233,23
     LTEXT           "Edge weightning [30]",IDC_STATIC_EDGEW,4,178,69,8
 END
 
 IDD_CFG_FNORDL_DLG DIALOGEX 0, 0, 186, 70
-STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
-    WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Configure fnordlicht device"
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setup fnordlicht device"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    COMBOBOX        IDC_COMPORT,61,11,80,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_COMPORT,61,11,80,100,CBS_DROPDOWNLIST | WS_TABSTOP
     PUSHBUTTON      "Cancel",IDCANCEL,77,54,50,14
     DEFPUSHBUTTON   "OK",IDOK,134,54,50,14
     LTEXT           "Serialport:",IDC_STATIC,9,11,34,8
     GROUPBOX        "Connection...",IDC_STATIC,2,2,182,49
     LTEXT           "Num Channels:",IDC_STATIC,9,31,49,8
-    EDITTEXT        IDC_EDT_FNORDL_CH,101,26,40,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
+    EDITTEXT        IDC_EDT_FNORDL_CH,101,26,40,14,ES_AUTOHSCROLL | ES_NUMBER
 END
 
 
@@ -454,14 +362,14 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
         LEFTMARGIN, 4
-        RIGHTMARGIN, 223
+        RIGHTMARGIN, 270
         TOPMARGIN, 3
-        BOTTOMMARGIN, 109
+        BOTTOMMARGIN, 192
     END
 
     IDD_SETUP, DIALOG
@@ -560,29 +468,29 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_APP_TITLE           "AtmoWinX"
-    IDS_SETTINGS            "&Einstellungen"
+    IDS_SETTINGS            "&Settings"
     IDS_MODUS               "Modus"
-    IDS_EFFECT_NONE         "kein Effekt"
+    IDS_EFFECT_NONE         "Off"
     IDS_EFFECT_LIVE         "Live"
-    IDS_EFFECT_STAT_COLOR   "Statische Farbe"
+    IDS_EFFECT_STAT_COLOR   "Static colors"
     IDC_ATMOWINA            "AtmoSetupDialog"
-    IDS_EFFECT_COLOR_CHANGE "Farbwechsel"
-    IDS_EFFECT_COLOR_CHLR   "Farbwechsel LR"
+    IDS_EFFECT_COLOR_CHANGE "Color changer"
+    IDS_EFFECT_COLOR_CHLR   "Color changer L/R"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_INFO                "Info"
-    IDS_QUIT                "beenden"
-    IDS_CHANNELASSIGN       "Kanalzuordnung"
-    IDS_DISPLAY_SETCHANGED  "Display Einstellungen wurden verändert. Bitte Einstellungen überprüfen."
-    IDS_HINT                "Hinweis"
+    IDS_QUIT                "Exit"
+    IDS_CHANNELASSIGN       "Assign channels"
+    IDS_DISPLAY_SETCHANGED  "Display settings have been changed. Please check the settings."
+    IDS_HINT                "Hint"
 END
 
-#endif    // Deutsch (Deutschland) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

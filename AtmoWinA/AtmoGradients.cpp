@@ -325,7 +325,7 @@ ATMO_BOOL CAtmoGradients::HandleMessage(HWND hwnd, UINT uMsg, WPARAM wParam, LPA
               {
                   fclose(fp);
                   sprintf( msg, "Datei '%s' wirklich überschreiben?", psz_filename_dest);
-                  if(MessageBox(m_hDialog, msg ,"Frage",MB_ICONQUESTION | MB_YESNO) == IDNO)
+                  if(MessageBox(m_hDialog, msg ,"Question",MB_ICONQUESTION | MB_YESNO) == IDNO)
                      return(r);
               }
                
