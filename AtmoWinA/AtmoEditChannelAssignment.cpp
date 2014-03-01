@@ -52,7 +52,7 @@ void CAtmoEditChannelAssignment::EditAssignment(CAtmoChannelAssignment *ca)
 
 void CAtmoEditChannelAssignment::SaveAssignment(CAtmoChannelAssignment *ca)
 {
-    char buffer[64];
+    char buffer[CAP_MAX_NUM_ZONES];
     HWND ctrl;
     if(!ca) return;
 
@@ -407,7 +407,7 @@ ATMO_BOOL CAtmoEditChannelAssignment::ExecuteCommand(HWND hControl,int wmId, int
 
        case IDC_EDT_NAME: {
             if(wmEvent == EN_CHANGE) {
-               char buffer[64];
+               char buffer[CAP_MAX_NUM_ZONES];
                if(Edit_GetText(hControl,buffer,sizeof(buffer))>0) {
 
                   ctrl = getDlgItem(IDC_BU_MODIFY);
